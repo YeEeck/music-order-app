@@ -1,4 +1,5 @@
 ﻿using NAudio.Wave;
+using OrderMusicApp.Utils.AudioPlayerManager;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,11 +16,10 @@ namespace OrderMusicApp.Component.Home.AudioDeviceSelector.ViewModel
         public ObservableCollection<string> AudioDevices { get { return _audioDevices; } }
 
         public AudioDeviceSelectorViewModel() {
-            foreach (var dev in DirectSoundOut.Devices)
+            foreach (var audioDevice in AudioPlayerManager.Instance.DeviceList)
             {
-                _audioDevices.Add($"{dev.Description}");
+                _audioDevices.Add(audioDevice.Name);
             }
-            
         }
     }
 }
