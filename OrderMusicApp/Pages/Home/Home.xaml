@@ -4,13 +4,19 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrderMusicApp.Pages.Home"
-      xmlns:usercontrols="clr-namespace:OrderMusicApp.Component.Home.AudioDeviceSelector"
+      xmlns:AudioDeviceSelector="clr-namespace:OrderMusicApp.Component.Home.AudioDeviceSelector"
+      xmlns:vm="clr-namespace:OrderMusicApp.Pages.Home.ViewModel"
+      d:DataContext="{d:DesignInstance Type=vm:HomeViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Background="White"
       Title="Home">
 
     <Grid VerticalAlignment="Top">
-        <usercontrols:AudioDeviceSelector Height="auto"></usercontrols:AudioDeviceSelector>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <AudioDeviceSelector:AudioDeviceSelector Height="25" AudioDevices="{Binding AudioDeviceList}"></AudioDeviceSelector:AudioDeviceSelector>
     </Grid>
 </Page>

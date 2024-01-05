@@ -3,17 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:OrderMusicApp.Component.Home.AudioDeviceSelector" xmlns:vm="clr-namespace:OrderMusicApp.Component.Home.AudioDeviceSelector.ViewModel" d:DataContext="{d:DesignInstance Type=vm:AudioDeviceSelectorViewModel}"
+             xmlns:local="clr-namespace:OrderMusicApp.Component.Home.AudioDeviceSelector"
+             x:Name ="AudioDeviceSelectorControl"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="800">
-    <Grid Height="24">
+             d:DesignHeight="25" d:DesignWidth="800">
+    <Grid DataContext="{x:Type local:AudioDeviceSelector}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label>输出设备</Label>
-        <ComboBox Grid.Column="1" ItemsSource="{Binding AudioDevices}"></ComboBox>
+        <ComboBox Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding AudioDevices, ElementName=AudioDeviceSelectorControl}"></ComboBox>
         <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0">测试输出</Button>
     </Grid>
 </UserControl>

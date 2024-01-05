@@ -1,25 +1,15 @@
-﻿using NAudio.Wave;
-using OrderMusicApp.Utils.AudioPlayerManager;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderMusicApp.Component.Home.AudioDeviceSelector.ViewModel
 {
-    internal class AudioDeviceSelectorViewModel
+    internal partial class AudioDeviceSelectorViewModel : ObservableObject
     {
-        private ObservableCollection<string> _audioDevices = new ObservableCollection<string>();
-
-        public ObservableCollection<string> AudioDevices { get { return _audioDevices; } }
-
-        public AudioDeviceSelectorViewModel() {
-            foreach (var audioDevice in AudioPlayerManager.Instance.DeviceList)
-            {
-                _audioDevices.Add(audioDevice.Name);
-            }
-        }
+        [ObservableProperty]
+        private string? text;
     }
 }

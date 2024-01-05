@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderMusicApp.Pages.Home.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace OrderMusicApp.Pages.Home
     /// </summary>
     public partial class Home : Page
     {
+        HomeViewModel vm = new HomeViewModel();
         public Home()
         {
             InitializeComponent();
+            DataContext = vm;
         }
     }
 }
