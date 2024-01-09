@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace OrderMusicApp.Pages.Home.ViewModel
 {
-    internal class HomeViewModel : ObservableObject
+    internal partial class HomeViewModel : ObservableObject
     {
         private readonly ObservableCollection<string> _audioDevices = [];
 
@@ -23,6 +23,17 @@ namespace OrderMusicApp.Pages.Home.ViewModel
                 _audioDevices.Add(audioDevice.Name);
             }
             //AudioDeviceList = _audioDevices;
+        }
+
+        [ObservableProperty]
+        private int currentDeviceIndex;
+
+        public string CurrentDeviceGuid
+        {
+            get
+            {
+                return AudioPlayerManager.Instance.DeviceList.ToArray()[CurrentDeviceIndex].Guid;
+            }
         }
     }
 }

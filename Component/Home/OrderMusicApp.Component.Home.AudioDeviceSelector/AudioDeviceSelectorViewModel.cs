@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderMusicApp.Component.Home.AudioDeviceSelector.ViewModel
+namespace OrderMusicApp.Component.Home.AudioDeviceSelector
 {
     internal partial class AudioDeviceSelectorViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string? text;
+        private int selectorIndex;
     }
 }

@@ -1,3 +1,9 @@
 OrderMusicApp/bin
 OrderMusicApp/obj
 /.vs
+/Component/Home/OrderMusicApp.Component.Home.AudioDeviceSelector/bin
+/Component/Home/OrderMusicApp.Component.Home.AudioDeviceSelector/obj
+/Pages/OrderMusicApp.Pages.Home/bin
+/Pages/OrderMusicApp.Pages.Home/obj
+/Utils/bin
+/Utils/obj

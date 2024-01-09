@@ -1,4 +1,4 @@
-ï»¿using OrderMusicApp.Pages.Home.ViewModel;
+using OrderMusicApp.Pages.Home.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +17,10 @@ using System.Windows.Shapes;
 namespace OrderMusicApp.Pages.Home
 {
     /// <summary>
-    /// Home.xaml çš„äº¤äº’é€»è¾‘
+    /// Home.xaml µÄ½»»¥Âß¼­
     /// </summary>
+    /// 
+
     public partial class Home : Page
     {
         HomeViewModel vm = new HomeViewModel();
@@ -26,6 +28,12 @@ namespace OrderMusicApp.Pages.Home
         {
             InitializeComponent();
             DataContext = vm;
+        }
+
+        private void AudioDeviceSelector_AudioDeviceChanged(object sender, RoutedEventArgs e)
+        {
+            int DeviceIndex = (int)e.Source;
+            vm.CurrentDeviceIndex = DeviceIndex;
         }
     }
 }

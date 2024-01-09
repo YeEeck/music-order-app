@@ -14,12 +14,13 @@ namespace OrderMusicApp.Utils.AudioPlayerManager
 
         private AudioPlayerManager() { }
 
-        public static AudioPlayerManager Instance {  get { return instance; } }
-        
-        public static AudioPlayerManager GetInstance() {
+        public static AudioPlayerManager Instance { get { return instance; } }
+
+        public static AudioPlayerManager GetInstance()
+        {
             return instance;
         }
-        
+
         public List<AudioDevice> DeviceList
         {
             get

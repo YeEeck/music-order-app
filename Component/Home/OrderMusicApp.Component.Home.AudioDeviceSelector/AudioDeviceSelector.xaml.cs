@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,18 +13,17 @@ using System.Windows.Shapes;
 
 namespace OrderMusicApp.Component.Home.AudioDeviceSelector
 {
-    /// <summary>
-    /// AudioDeviceSelector.xaml 的交互逻辑
-    /// </summary>
     public partial class AudioDeviceSelector : UserControl
     {
+        AudioDeviceSelectorViewModel vm = new AudioDeviceSelectorViewModel();
         public AudioDeviceSelector()
         {
             InitializeComponent();
             //DataContext = vm;
             //DataContext.ToString();
             //DataContext = this;
-            
+            //DataContext = new AudioDeviceSelectorViewModel();
+            WrapGrid.DataContext = vm;
         }
 
         [Category("AudioDevices")]
@@ -42,5 +37,27 @@ namespace OrderMusicApp.Component.Home.AudioDeviceSelector
             set { SetValue(AudioDevicesProperty, value); }
         }
 
+        public static readonly RoutedEvent AudioDeviceChangedEvent = EventManager.RegisterRoutedEvent("AudioDeviceChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(AudioDeviceSelector));
+
+        public event RoutedEventHandler AudioDeviceChanged
+        {
+            add
+            {
+                AddHandler(AudioDeviceChangedEvent, value);
+            }
+
+            remove
+            {
+                RemoveHandler(AudioDeviceChangedEvent, value);
+            }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox? control = sender as ComboBox;
+            RoutedEventArgs args = new RoutedEventArgs(AudioDeviceChangedEvent, control?.SelectedIndex);
+            RaiseEvent(args);
+        }
     }
+
 }

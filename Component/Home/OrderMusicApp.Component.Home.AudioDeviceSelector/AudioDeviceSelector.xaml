@@ -7,14 +7,14 @@
              x:Name ="AudioDeviceSelectorControl"
              mc:Ignorable="d" 
              d:DesignHeight="25" d:DesignWidth="800">
-    <Grid DataContext="{x:Type local:AudioDeviceSelector}">
+    <Grid x:Name="WrapGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label>输出设备</Label>
-        <ComboBox Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding AudioDevices, ElementName=AudioDeviceSelectorControl}"></ComboBox>
+        <ComboBox Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding AudioDevices, ElementName=AudioDeviceSelectorControl}" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
         <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0">测试输出</Button>
     </Grid>
 </UserControl>
