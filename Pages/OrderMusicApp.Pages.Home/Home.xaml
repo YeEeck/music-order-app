@@ -1,4 +1,4 @@
-<Page x:Class="OrderMusicApp.Pages.Home.Home"
+﻿<Page x:Class="OrderMusicApp.Pages.Home.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,8 +14,16 @@
     <Grid VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition> </RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <AudioDeviceSelector:AudioDeviceSelector Height="25" AudioDevices="{Binding AudioDeviceList}" AudioDeviceChanged="AudioDeviceSelector_AudioDeviceChanged"></AudioDeviceSelector:AudioDeviceSelector>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <AudioDeviceSelector:AudioDeviceSelector Grid.Column="0" Height="25" AudioDevices="{Binding AudioDeviceList}" AudioDeviceChanged="AudioDeviceSelector_AudioDeviceChanged"></AudioDeviceSelector:AudioDeviceSelector>
+            <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0">测试输出</Button>
+        </Grid>
     </Grid>
 </Page>
