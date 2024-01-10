@@ -28,10 +28,23 @@ namespace OrderMusicApp.Utils.AudioPlayerManager
                 List<AudioDevice> result = new List<AudioDevice>();
                 foreach (var dev in DirectSoundOut.Devices)
                 {
-                    result.Add(new AudioDevice() { Guid = dev.Guid.ToString(), Name = dev.Description });
+                    result.Add(new AudioDevice() { Guid = dev.Guid, Name = dev.Description });
                 }
                 return result;
             }
+        }
+
+        public void PlayMusic(string path, Guid device)
+        {
+            DirectSoundOut directSoundOut = new(device);
+            AudioFileReader audioFileReader = new(path);
+            directSoundOut.Init(audioFileReader);
+            directSoundOut.Play();
+            Task.Run(() =>
+            {
+                Thread.Sleep(5000);
+                directSoundOut.Stop();
+            });
         }
     }
 }

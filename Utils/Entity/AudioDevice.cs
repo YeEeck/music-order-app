@@ -9,7 +9,7 @@ namespace OrderMusicApp.Utils.AudioPlayerManager.Obj
 {
     public class AudioDevice
     {
-        public required string Guid { get; set; }
+        public required Guid Guid { get; set; }
 
         public required string Name { get; set; }
     }

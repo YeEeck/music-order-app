@@ -1,4 +1,5 @@
 using OrderMusicApp.Pages.Home.ViewModel;
+using OrderMusicApp.Utils.AudioPlayerManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,13 @@ namespace OrderMusicApp.Pages.Home
 
         private void AudioDeviceSelector_AudioDeviceChanged(object sender, RoutedEventArgs e)
         {
-            int DeviceIndex = (int)e.Source;
+            int DeviceIndex = (int)e.OriginalSource;
             vm.CurrentDeviceIndex = DeviceIndex;
+        }
+
+        private void Audio_Output_Button_Click(object sender, RoutedEventArgs e)
+        {
+            AudioPlayerManager.Instance.PlayMusic("D:\\CloudMusic\\1.mp3", vm.CurrentDeviceGuid);
         }
     }
 }

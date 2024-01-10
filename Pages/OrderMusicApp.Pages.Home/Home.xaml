@@ -23,7 +23,7 @@
             </Grid.ColumnDefinitions>
 
             <AudioDeviceSelector:AudioDeviceSelector Grid.Column="0" Height="25" AudioDevices="{Binding AudioDeviceList}" AudioDeviceChanged="AudioDeviceSelector_AudioDeviceChanged"></AudioDeviceSelector:AudioDeviceSelector>
-            <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0">测试输出</Button>
+            <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0" Click="Audio_Output_Button_Click">测试输出</Button>
         </Grid>
     </Grid>
 </Page>
