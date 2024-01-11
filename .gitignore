@@ -7,3 +7,5 @@ OrderMusicApp/obj
 /Pages/OrderMusicApp.Pages.Home/obj
 /Utils/bin
 /Utils/obj
+/Component/Home/OrderMusicApp.Component.Home.NetworkAddressInput/bin
+/Component/Home/OrderMusicApp.Component.Home.NetworkAddressInput/obj
