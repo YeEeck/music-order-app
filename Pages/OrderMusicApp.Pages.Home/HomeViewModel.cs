@@ -19,10 +19,7 @@ namespace OrderMusicApp.Pages.Home.ViewModel
 
         public HomeViewModel()
         {
-            foreach (var audioDevice in AudioPlayerManager.Instance.DeviceList)
-            {
-                _audioDevices.Add(audioDevice.Name);
-            }
+            UpdateAudioDeviceListData();
             //AudioDeviceList = _audioDevices;
         }
 
@@ -34,6 +31,14 @@ namespace OrderMusicApp.Pages.Home.ViewModel
             get
             {
                 return AudioPlayerManager.Instance.DeviceList.ToArray()[CurrentDeviceIndex].Guid;
+            }
+        }
+
+        public void UpdateAudioDeviceListData()
+        {
+            foreach (var audioDevice in AudioPlayerManager.Instance.DeviceList)
+            {
+                _audioDevices.Add(audioDevice.Name);
             }
         }
     }

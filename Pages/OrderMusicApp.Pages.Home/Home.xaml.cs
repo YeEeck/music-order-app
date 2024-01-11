@@ -41,5 +41,10 @@ namespace OrderMusicApp.Pages.Home
         {
             AudioPlayerManager.Instance.PlayMusic("D:\\CloudMusic\\1.mp3", vm.CurrentDeviceGuid);
         }
+
+        private void AudioDeviceSelector_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            vm.UpdateAudioDeviceListData();
+        }
     }
 }
