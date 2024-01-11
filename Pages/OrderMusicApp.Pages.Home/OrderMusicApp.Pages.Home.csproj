@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Component\Home\OrderMusicApp.Component.Home.AudioDeviceSelector\OrderMusicApp.Component.Home.AudioDeviceSelector.csproj" />
+    <ProjectReference Include="..\..\Component\Home\OrderMusicApp.Component.Home.NetworkAddressInput\OrderMusicApp.Component.Home.NetworkAddressInput.csproj" />
     <ProjectReference Include="..\..\Utils\OrderMusicApp.Utils.AudioPlayerManager.csproj" />
   </ItemGroup>
 
