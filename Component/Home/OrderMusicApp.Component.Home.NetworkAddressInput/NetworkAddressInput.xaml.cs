@@ -16,9 +16,11 @@ namespace OrderMusicApp.Component.Home.NetworkAddressInput
     /// </summary>
     public partial class NetworkAddressInput : UserControl
     {
+        NetworkAddressInputViewModel vm = new NetworkAddressInputViewModel();
         public NetworkAddressInput()
         {
             InitializeComponent();
+            DataContext = vm;
         }
     }
 
