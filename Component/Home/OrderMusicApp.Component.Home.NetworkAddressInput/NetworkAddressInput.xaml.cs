@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,11 +18,32 @@ namespace OrderMusicApp.Component.Home.NetworkAddressInput
     /// </summary>
     public partial class NetworkAddressInput : UserControl
     {
-        NetworkAddressInputViewModel vm = new NetworkAddressInputViewModel();
+        readonly NetworkAddressInputViewModel vm;
+
         public NetworkAddressInput()
         {
             InitializeComponent();
-            DataContext = vm;
+            vm = new();
+            //WrapGrid.DataContext = vm;
+        }
+        
+
+        [Category("IpAddress")]
+        public static readonly DependencyProperty IpAddressProperty = DependencyProperty.Register("IpAddress", typeof(string), typeof(NetworkAddressInput), new PropertyMetadata(""));
+
+        public string IpAddress
+        {
+            get { return (string)GetValue(IpAddressProperty); }
+            set { SetValue(IpAddressProperty, value); }
+        }
+
+        [Category("Port")]
+        public static readonly DependencyProperty PortProperty = DependencyProperty.Register("Port", typeof(string), typeof(NetworkAddressInput), new PropertyMetadata(""));
+
+        public uint Port
+        {
+            get { return (uint)GetValue(IpAddressProperty); }
+            set { SetValue(IpAddressProperty, value); }
         }
     }
 

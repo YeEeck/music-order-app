@@ -41,5 +41,11 @@ namespace OrderMusicApp.Pages.Home.ViewModel
                 _audioDevices.Add(audioDevice.Name);
             }
         }
+
+        [ObservableProperty]
+        private string ipAddress = "0.0.0.0";
+
+        [ObservableProperty]
+        private uint port = 8080;
     }
 }

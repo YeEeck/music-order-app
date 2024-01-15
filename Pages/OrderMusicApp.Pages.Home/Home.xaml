@@ -32,8 +32,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <NetworkAddressInput:NetworkAddressInput Height="25"></NetworkAddressInput:NetworkAddressInput>
-            <Button Grid.Column="1" Margin="4 0 4 0" Padding="8 0 8 0">测试连接</Button>
+            <NetworkAddressInput:NetworkAddressInput Height="25" IpAddress="{Binding IpAddress, Mode=TwoWay}" Port="{Binding Port, Mode=TwoWay}" ></NetworkAddressInput:NetworkAddressInput>
+            <Button Grid.Column="1" Margin="4 0 4 0" Padding="8 0 8 0" Click="Button_Click">测试连接</Button>
         </Grid>
     </Grid>
 </Page>

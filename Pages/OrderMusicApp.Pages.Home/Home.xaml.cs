@@ -46,5 +46,19 @@ namespace OrderMusicApp.Pages.Home
         {
             vm.UpdateAudioDeviceListData();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (vm.IpAddress == "0.0.0.0")
+            {
+                vm.IpAddress = "1.1.1.1";
+                vm.Port = 9090;
+            }
+            else
+            {
+                MessageBox.Show(vm.IpAddress + ":" + vm.Port);
+            }
+            
+        }
     }
 }
