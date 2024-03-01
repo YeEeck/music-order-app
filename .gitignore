@@ -9,3 +9,9 @@ OrderMusicApp/obj
 /Utils/obj
 /Component/Home/OrderMusicApp.Component.Home.NetworkAddressInput/bin
 /Component/Home/OrderMusicApp.Component.Home.NetworkAddressInput/obj
+/Modules/OrderMusicApp.Modules.NetworkInterfaceModule/bin/Debug/net8.0
+/Modules/OrderMusicApp.Modules.NetworkInterfaceModule/obj
+/Utils/OrderMusicApp.Utils.AudioPlayerManager/bin
+/Utils/OrderMusicApp.Utils.AudioPlayerManager/obj
+/Utils/OrderMusicApp.Utils.CmdRunner/bin/Debug/net8.0
+/Utils/OrderMusicApp.Utils.CmdRunner/obj
