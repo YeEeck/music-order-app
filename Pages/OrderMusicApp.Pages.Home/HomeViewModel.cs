@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using OrderMusicApp.Modules.ControlInterfaceModule;
 using OrderMusicApp.Utils.AudioPlayerManager;
 using OrderMusicApp.Utils.AudioPlayerManager.Obj;
 using System;
@@ -14,6 +15,8 @@ namespace OrderMusicApp.Pages.Home.ViewModel
     internal partial class HomeViewModel : ObservableObject
     {
         private readonly ObservableCollection<string> _audioDevices = [];
+
+        private readonly ControlInterfaceManager controlInterfaceManager = ControlInterfaceManager.Instance;
 
         public ObservableCollection<string> AudioDeviceList { get { return _audioDevices; } }
 
