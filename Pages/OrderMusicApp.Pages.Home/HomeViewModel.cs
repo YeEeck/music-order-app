@@ -16,7 +16,7 @@ namespace OrderMusicApp.Pages.Home.ViewModel
     {
         private readonly ObservableCollection<string> _audioDevices = [];
 
-        private readonly ControlInterfaceManager controlInterfaceManager = ControlInterfaceManager.Instance;
+        private readonly ControlInterface controlInterfaceManager = ControlInterface.Instance;
 
         public ObservableCollection<string> AudioDeviceList { get { return _audioDevices; } }
 
