@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Utils\OrderMusicApp.Utils.CmdRunner\OrderMusicApp.Utils.CmdRunner.csproj" />
+    <ProjectReference Include="..\OrderMusicApp.Modules.WebApi\OrderMusicApp.Modules.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,9 +6,15 @@ namespace OrderMusicApp.Modules.ControlInterfaceModule
     {
         private static ControlInterface _instance = new ControlInterface();
 
-        public static ControlInterface Interface { get { return _instance; } }
+        public static ControlInterface Instance { get { return _instance; } }
 
-        private ControlInterface() { }
+        private ControlInterface()
+        {
+            Task.Run(() =>
+            {
+                WebApi.Program.Main([]);
+            });
+        }
 
         public void ContinuePlay()
         {
