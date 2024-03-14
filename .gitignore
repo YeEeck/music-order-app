@@ -15,3 +15,6 @@ OrderMusicApp/obj
 /Utils/OrderMusicApp.Utils.AudioPlayerManager/obj
 /Utils/OrderMusicApp.Utils.CmdRunner/bin/Debug/net8.0
 /Utils/OrderMusicApp.Utils.CmdRunner/obj
+/Modules/OrderMusicApp.Modules.NetworkInterfaceModule/bin/Release/net8.0
+/Modules/OrderMusicApp.Modules.WebApi/bin
+/Modules/OrderMusicApp.Modules.WebApi/obj
