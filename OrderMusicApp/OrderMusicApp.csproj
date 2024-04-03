@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Modules\OrderMusicApp.Modules.NetworkInterfaceModule\OrderMusicApp.Modules.ControlInterfaceModule.csproj" />
+    <ProjectReference Include="..\Modules\OrderMusicApp.Modules.WebApi\OrderMusicApp.Modules.WebApi.csproj" />
     <ProjectReference Include="..\Pages\OrderMusicApp.Pages.Home\OrderMusicApp.Pages.Home.csproj" />
   </ItemGroup>
 

@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Utils\OrderMusicApp.Utils.CmdRunner\OrderMusicApp.Utils.CmdRunner.csproj" />
-  </ItemGroup>
-
 </Project>

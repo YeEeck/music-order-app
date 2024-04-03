@@ -21,6 +21,10 @@ namespace OrderMusicApp
         {
             InitializeComponent();
             MainFrame.Navigate(new Home());
+            Task.Run(() =>
+            {
+                Modules.WebApi.Program.Main([]);
+            });
         }
     }
 }

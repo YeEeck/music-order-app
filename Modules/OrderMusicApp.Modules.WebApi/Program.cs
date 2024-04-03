@@ -11,22 +11,21 @@ namespace OrderMusicApp.Modules.WebApi
             builder.WebHost.UseUrls(["http://*:15000"]);
 
             // Add services to the container.
-            builder.Services.AddControllers().AddApplicationPart(typeof(WeatherForecastController).Assembly);
+            builder.Services.AddControllers().AddApplicationPart(typeof(AudioPlayerController).Assembly);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            //builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                //app.UseSwagger();
+                //app.UseSwaggerUI();
             }
 
-            app.UseAuthorization();
-
+            //app.UseAuthorization();
 
             app.MapControllers();
 

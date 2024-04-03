@@ -13,7 +13,7 @@ namespace OrderMusicApp.Modules.ControlInterfaceModule
 
         public void Stop() { }
 
-        public void PausePlay();
+        public bool PausePlay();
 
         public void ContinuePlay();
 
@@ -25,6 +25,8 @@ namespace OrderMusicApp.Modules.ControlInterfaceModule
         public void RemoveFromPlayList(int id) {
         
         }
+
+        public bool PlayMusic(int id);
 
         public MusicControlInfo GetCurrentMusicInfo();
 

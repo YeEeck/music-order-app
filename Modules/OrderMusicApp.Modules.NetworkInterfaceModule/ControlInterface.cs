@@ -10,10 +10,7 @@ namespace OrderMusicApp.Modules.ControlInterfaceModule
 
         private ControlInterface()
         {
-            Task.Run(() =>
-            {
-                WebApi.Program.Main([]);
-            });
+            
         }
 
         public void ContinuePlay()
@@ -31,9 +28,14 @@ namespace OrderMusicApp.Modules.ControlInterfaceModule
             throw new NotImplementedException();
         }
 
-        public void PausePlay()
+        public bool PausePlay()
         {
-            throw new NotImplementedException();
+            return true;
+        }
+
+        public bool PlayMusic(int id)
+        {
+            return true;
         }
 
         public void Start()

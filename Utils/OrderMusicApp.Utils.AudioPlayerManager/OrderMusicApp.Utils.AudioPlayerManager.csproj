@@ -11,4 +11,8 @@
     <PackageReference Include="NAudio" Version="2.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\OrderMusicApp.Modules.NetworkInterfaceModule\OrderMusicApp.Modules.ControlInterfaceModule.csproj" />
+  </ItemGroup>
+
 </Project>
