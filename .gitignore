@@ -18,3 +18,5 @@ OrderMusicApp/obj
 /Modules/OrderMusicApp.Modules.NetworkInterfaceModule/bin/Release/net8.0
 /Modules/OrderMusicApp.Modules.WebApi/bin
 /Modules/OrderMusicApp.Modules.WebApi/obj
+/Utils/OrderMusicApp.Utils.CloudMusicService/obj
+/Utils/OrderMusicApp.Utils.CloudMusicService/bin/Debug/net8.0
