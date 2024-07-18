@@ -25,7 +25,7 @@
             </Grid.ColumnDefinitions>
 
             <AudioDeviceSelector:AudioDeviceSelector Grid.Column="0" Height="25" AudioDevices="{Binding AudioDeviceList}" AudioDeviceChanged="AudioDeviceSelector_AudioDeviceChanged" MouseUp="AudioDeviceSelector_MouseUp"></AudioDeviceSelector:AudioDeviceSelector>
-            <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0" Click="Audio_Output_Button_Click">测试输出</Button>
+            <Button Grid.Column="2" Margin="4 0 4 0" Padding="8 0 8 0" Command="{Binding AudioTestCommand}">测试输出</Button>
         </Grid>
         <Grid Grid.Row="1" Margin="0 4 0 0">
             <Grid.ColumnDefinitions>
@@ -33,7 +33,7 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <NetworkAddressInput:NetworkAddressInput Height="25" IpAddress="{Binding IpAddress, Mode=TwoWay}" Port="{Binding Port, Mode=TwoWay}" ></NetworkAddressInput:NetworkAddressInput>
-            <Button Grid.Column="1" Margin="4 0 4 0" Padding="8 0 8 0" Click="Button_Click">测试连接</Button>
+            <Button Grid.Column="1" Margin="4 0 4 0" Padding="8 0 8 0" Command="{Binding ServerLinkTestCommand}">测试连接</Button>
         </Grid>
     </Grid>
 </Page>

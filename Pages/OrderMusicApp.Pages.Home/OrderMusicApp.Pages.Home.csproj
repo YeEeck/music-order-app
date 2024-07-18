@@ -11,6 +11,7 @@
     <ProjectReference Include="..\..\Component\Home\OrderMusicApp.Component.Home.AudioDeviceSelector\OrderMusicApp.Component.Home.AudioDeviceSelector.csproj" />
     <ProjectReference Include="..\..\Component\Home\OrderMusicApp.Component.Home.NetworkAddressInput\OrderMusicApp.Component.Home.NetworkAddressInput.csproj" />
     <ProjectReference Include="..\..\Modules\OrderMusicApp.Modules.NetworkInterfaceModule\OrderMusicApp.Modules.ControlInterfaceModule.csproj" />
+    <ProjectReference Include="..\..\Modules\OrderMusicApp.Modules.WebApi\OrderMusicApp.Modules.WebApi.csproj" />
     <ProjectReference Include="..\..\Utils\OrderMusicApp.Utils.AudioPlayerManager\OrderMusicApp.Utils.AudioPlayerManager.csproj" />
   </ItemGroup>
 

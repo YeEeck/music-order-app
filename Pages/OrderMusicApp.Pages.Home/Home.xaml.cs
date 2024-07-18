@@ -37,28 +37,9 @@ namespace OrderMusicApp.Pages.Home
             vm.CurrentDeviceIndex = DeviceIndex;
         }
 
-        private void Audio_Output_Button_Click(object sender, RoutedEventArgs e)
-        {
-            AudioPlayerManager.Instance.PlayMusic("D:\\CloudMusic\\1.mp3", vm.CurrentDeviceGuid);
-        }
-
         private void AudioDeviceSelector_MouseUp(object sender, MouseButtonEventArgs e)
         {
             vm.UpdateAudioDeviceListData();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (vm.IpAddress == "0.0.0.0")
-            {
-                vm.IpAddress = "1.1.1.1";
-                vm.Port = 9090;
-            }
-            else
-            {
-                MessageBox.Show(vm.IpAddress + ":" + vm.Port);
-            }
-            
         }
     }
 }
